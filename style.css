@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family:cursive;
+
+}
+
+#logo{
+    width:20%;
+    margin-left: -150px;
+    margin-top: 0;
+}
+
+.nav1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.left .n-btn{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.right i{
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.right i:hover{
+    color:rgb(156, 153, 153);
+}
+.n-btn{
+    background-color: red;
+    color: white;
+    border-radius: 13px;
+    padding: 5px 10px;
+    border: none;
+}
+
+.n-btn:hover{
+    cursor: pointer;
+}
+
+.nav2 ul{
+    display: flex;
+    justify-content: center;
+}
+
+.nav2 ul li{
+    list-style: none;
+    padding:12px 10px;
+    color: rgb(218, 213, 213);
+    margin-bottom: 10px;
+}
+
+.nav2 ul li:hover{
+    transform: scale(1.2);
+}
+
+.wallpaper{
+    height:90vh;
+    width:98vw;
+}
+
+.heading{
+    margin-left:3%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.phase0,.P1P2IM,.phase3,.cast{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+/* .phase1,.phase2{
+    
+} */
+
+.phase0 img,.phase1 img,.phase2 img,.phase3 img,.cast img{
+    height: 250px;
+    width: 150px;
+    border-radius: 20px;
+}
+
+.P1P2{
+    margin-left: -110px;
+}
+.phase1 img,.phase2 img{
+    margin-right: 10px;
+}
+.ironman img{
+    height: 620px;
+    width: 200px;
+}
+
+[class^="phase"] img:hover {
+    position: relative;
+    bottom:5px;
+}
+.ironman:hover{
+    transform: rotate(-20deg); /* You can specify the angle you want to rotate (in degrees) */
+
+}
+
+.avengers{
+    height: 180px;
+    width: 300px;
+
+}
+.aveng-div{
+    text-align: center;
+}
+
+.men{
+    margin-top: 10px;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.men div{
+    text-align: center;
+}
+
+.men div img{
+    display: block;
+}
+.men div :first-child{
+    height:370px;
+    width: 250px;
+}
+
+.men div :first-child:hover{
+    position: relative;
+    bottom: 20px;
+}
+
+.men div :nth-child(2){
+    height: 75px;
+    width: 100px;
+    margin-left: 70px;
+}
+
+.cast-img img{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+footer{
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 10px;
+}
+.sec-1 img{
+    width: 300px;
+    height:150px;
+    margin-left: 10px;
+}
+.sec-1{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.sec-1 div{
+    margin-top: 25px;
+}
+
+.sec-2{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.menu-4 i{
+    margin-left: 10px;
+}
+
+.menu-4 i:hover,.cast-img img:hover{
+    transform: scale(1.2);;
+}
+
+footer p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+/*  ANIMATE */
+.ironman {
+
+    position: relative;
+
+    height: 620px;
+    width: 200px;
+
+    transform-style: preserve-3d;
+
+    animation:animate 20s linear infinite;
+
+}
+
+@keyframes animate{
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.ironman span {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+    width: 100%;
+
+    height: 100%;
+
+    transform-origin: center;
+
+    transform-style: preserve-3d;
+
+    transform: rotateY(calc(var(--i)+ 45deg)) translateZ(400px);
+
+    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent, #0004);
+}
+
+.ironman span img {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
